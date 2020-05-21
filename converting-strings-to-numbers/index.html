@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Converting Strings to Numbers</title>
+<style>
+table{border: 1px solid lightgray;
+    padding: 4px;}
+</style>
+
+<script>
+
+function addNumbers(){
+    // Checking if First field is Empty
+    var firstNum = document.getElementById('firstNumber').value;
+        if(firstNum == ''){
+            alert('First number is required');
+            return;
+        }
+     // Checking if First field is Invalid
+    var firstNum = parseFloat(firstNum);
+        if(isNaN(firstNum)){
+            alert('Please enter a valid number in the First text box.');
+            return;
+        };
+    
+    // Checking if Second field is Empty
+    var secondNum = document.getElementById('secondNumber').value;
+        if(secondNum == ''){
+            alert('Second number is required');
+            return;
+        };
+    // Checking if Second field is Invalid
+    var secondNum = parseFloat(secondNum);
+    if(isNaN(secondNum)){
+        alert('Please enter a valid number in the Second text box.');
+        return;
+    }
+    document.getElementById('finalRusalt').value = firstNum + secondNum;
+}
+
+</script>
+</head>
+<body>
+
+<table>
+    <tbody>
+        <tr>
+            <td>First Number</td>
+            <td><input type="text" id="firstNumber" placeholder="Enter First No."></td>
+        </tr>
+        <tr>
+            <td>Second Number</td>
+            <td><input type="text" id="secondNumber" placeholder="Enter Second No."></td>
+        </tr>
+
+        <tr>
+            <td>Result</td>
+            <td><input type="text" id="finalRusalt" placeholder="Check your result"></td>
+        </tr>
+
+        <tr>
+            <td colspan="1"></td>
+            <td><button type="button" id="addbtn" onclick="addNumbers();">Add</button></td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
