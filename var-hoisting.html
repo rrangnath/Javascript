@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Variable Hoisting by Rangnath Mishra</title>
+  
+  </head>
+  <body>
+	
+
+   
+    <script>
+   // Ex 1
+a = 5;
+document.write(a + '<br />' );
+var a;
+
+/* Ex 1
+here we are getting correct output because javascript has hoisted these variable on top like
+var a;
+a = 10;
+document.write(a + '<br />' );
+thats why output is [ 5 ]
+*/
+
+// Ex 2
+function hoistDemo(){
+
+document.write(a);
+var a = 'hi this is hoisted';
+}
+hoistDemo();
+
+/*
+Ex 2
+In second option we are getting undefined because js han done the same thing like Ex 1
+
+var a;
+a = 10;
+document.write(a + '<br />' );
+
+function hoistDemo(){
+var a;
+document.write(a);
+a = 'hi this is hoisted';
+
+so in this case valiable got assined then after we did print but value was in below of print so output is [ undefined ]
+}
+
+*/
+    </script>
+  </body>
+</html>
+
+
+
+
+
+

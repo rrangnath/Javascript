@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Filter by Rangnath Mishra</title>
+	</head>
+	
+	<body>
+	
+    <script>
+	// Example 1
+	let a = [1, 2, 5, 2, 1, 8];
+	let b = [];
+
+	let len = a.length;
+	for(let i=0; i<len; i++){
+		if(b.indexOf(a[i]) === -1){
+			b.push(a[i]);	
+		}
+	}
+	console.log(b + '<br />');
+	document.write(b + '<br />');
+	
+	// Example 2
+	let arr11 = [1, -1, 2, 3, 3, 4, -4, 5, -5, 6];
+	let arr22 = arr11.filter(n => n > 0);
+   
+	let arr33 = [];
+	let len1 = arr22.length;
+		for (let i =0; i<len1; i++){
+			if(arr33.indexOf(arr22[i]) === -1) {
+			arr33.push(arr22[i]);
+			}
+		};
+	console.log(arr33 + '<br />'); 
+	document.write(arr33 + '<br />');
+   
+   // Example 3
+	let arr = [1, 2, -2, 2, 3, -3, 4, 5];
+	let arr2 = arr.filter(n => n > 0)
+	let arr3 = new Set(arr2);
+	let arr4 = [... arr3];
+
+	new Set([...arr].filter((res) => res > 0))
+	
+	console.log(arr4)
+	document.write(arr4 + '<br />');
+	
+	
+	 // Example 
+	let arr = [1, 2, -2, 2, 3, -3, 4, 5];
+	new Set([...arr].filter((res) => res > 0))
+	// bas na
+	
+	console.log(arr4)
+	document.write(arr4 + '<br />');
+    </script>
+	
+	</body>
+</html>
+
+
+new Set([...arr1].filter((res) => res > 0))
+Set(6) {1, 2, 3, 4, 5, …}[[Entries]]0: 11: 22: 33: 44: 55: 6size: (...)__proto__: Set
+[...new Set(arr1.filter((res) => res > 0))]
+
+
+arr1.reduce((newArray, item) => newArray.includes(item) ? newArray : [...newArray, item].filter(res => res > 0), []);
+
+
+
